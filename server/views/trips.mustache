@@ -1,0 +1,64 @@
+<html>
+
+<head>
+
+
+
+</head>
+
+
+
+<body>
+
+
+<h1>Trips</h1>
+
+<form method ="POST" action ="/add-trips">
+
+    <input type="text" placeholder = "title" name= "title"/>
+    <input type="text" placeholder ="date" name = "date"/>
+    <button>Save</button>
+
+</form>
+    
+    <ul>
+    {{#allTrips}}
+        <form method= "POST" action="/delete-trip">
+        <li>
+        <input type="hidden" value="{{tripId}}" name="tripId" />
+            <label>{{title}} - {{date}}</label>
+            <button type="submit" name="deleteButton">Delete</button>
+        </li>
+        </form>
+
+
+    {{/allTrips}}
+    
+
+    </ul>
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
