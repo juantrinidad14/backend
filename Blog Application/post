@@ -1,0 +1,10 @@
+CREATE TABLE post(
+	user_id Serial PRIMARY KEY,
+	title varchar(200),
+	body text,
+	date_created timestamp default current_timestamp,
+	date_updated timestamp default current_timestamp,
+	is_published boolean default False
+);
+
+INSERT INTO post(title, body,date_created,date_updated,is_published)VALUES('Cheesecake'); 

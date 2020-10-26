@@ -1,0 +1,53 @@
+<html>
+
+<head></head>
+
+
+<body>
+
+<h1>Desserts Post<h1>
+
+<form method="POST" action="/create-dessert">
+    <input type="text" placeholder="title" name="title" />
+    <input type="text" placeholder="body" name="body" />
+    <button>Save</button>
+</form> 
+
+
+
+<ul>
+{{#post}}
+
+    <li>
+    <form method="POST" action="/delete-dessert">
+        <label>{{title}}, {{body}}, {{date_created}},{{date_updated}}</label>
+        <input type="hidden" value={{user_id}} name="userId" />
+        <button>Delete</button>
+    </form>
+    </li>
+
+
+
+{{/post}}
+</ul>
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
